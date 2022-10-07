@@ -9,4 +9,4 @@ class Testfunction(unittest.TestCase):
         self.assertEqual(GetRepoNameAndCommit('richkempinski'), 200)
                         
     def testIDfault(self):
-        self.assertNotEqual(GetRepoNameAndCommit('dasdasdafdsgfabv', 200)
+        self.assertNotEqual(GetRepoNameAndCommit('dasdasdafdsgfabv'), 200)
