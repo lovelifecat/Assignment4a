@@ -2,7 +2,7 @@ import requests
 import json
 
 # username = input("please input username of github:")
-username = lovelifecat
+username = 'lovelifecat'
 
 url = 'https://api.github.com/users/%s/repos' % username
 
