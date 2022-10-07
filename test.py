@@ -3,11 +3,11 @@ from Assignment4a import GetRepoNameAndCommit
 
 class Testfunction(unittest.TestCase):
     def testID1(self):
-        self.assertEqual(GetRepoNameAndCommit('lovelifecat'), 200)
+        self.assertEqual(GetRepoNameAndCommit('lovelifecat'), 1)
 
     def testID2(self):
-        self.assertEqual(GetRepoNameAndCommit('richkempinski'), 200)
-                        
+        self.assertEqual(GetRepoNameAndCommit('richkempinski'), 1)
+
     def testIDfault(self):
-        self.assertNotEqual(GetRepoNameAndCommit('dasdasdafdsgfabv'), 200)
-        self.assertEqual(GetRepoNameAndCommit('dasdasdafdsgfabv'), 404)
+        self.assertNotEqual(GetRepoNameAndCommit('dasfsdcxvzxcvafadf'), 1)
+        self.assertEqual(GetRepoNameAndCommit('dasdasdafdsgfabv'), 0)
