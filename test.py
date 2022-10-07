@@ -6,5 +6,7 @@ class Testfunction(unittest.TestCase):
         self.assertEqual(GetRepoNameAndCommit('lovelifecat'), 200)
 
     def testID2(self):
-        self.assertEqual(GetRepoNameAndCommit('richkempinski'), 200)
-
+        self.assertEqual(GetRepoNameAndCommit('richkempinski'), 200）
+                        
+    def testIDfault(self):
+        self.assertNotEqual(GetRepoNameAndCommit('dasdasdafdsgfabv', 200)
