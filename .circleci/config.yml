@@ -13,11 +13,11 @@ jobs:
           command: |
             pip install pytest
             pip install requests
-            pytest --junitxml=test-results/junit.xml Assignment4a.py
+            pytest --junitxml=test-results/junit.xml test.py
       - store_test_results:
           path: test-results
           
 workflows:
-  testing_Assignment4a:
+  testing_test:
     jobs:
       - build-and-test
