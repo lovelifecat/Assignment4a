@@ -1,13 +1,18 @@
 import unittest
-from Assignment4a import GetRepoNameAndCommit
+import Assignment4a
+from unittest import mock
+
 
 class Testfunction(unittest.TestCase):
-    def testID1(self):
-        self.assertEqual(GetRepoNameAndCommit('lovelifecat'), 1)
 
-    def testID2(self):
-        self.assertEqual(GetRepoNameAndCommit('richkempinski'), 1)
+    @mock.patch('Assignment4a.GetRepoNameAndCommit')
+    def test_mock_url_function(self, mock_url):
+        mock_url.return_value = 1
+        result = Assignment4a.GetRepoNameAndCommit('lovelifecat')
+        self.assertEqual(result, True)
 
-    def testIDfault(self):
-        self.assertNotEqual(GetRepoNameAndCommit('dasfsdcxvzxcvafadf'), 1)
-        self.assertEqual(GetRepoNameAndCommit('dasdasdafdsgfabv'), 0)
+    @mock.patch('Assignment4a.GetRepoNameAndCommit')
+    def test_mock_url_false(self, mock_url):
+        mock_url.return_value = 0
+        result = Assignment4a.GetRepoNameAndCommit('dasfsdcxvzxcvafadf')
+        self.assertEqual(result, False)
